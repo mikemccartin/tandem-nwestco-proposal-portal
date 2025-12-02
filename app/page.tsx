@@ -108,8 +108,8 @@ export default function Home() {
               </div>
               <div className="download-body">
                 <p>Complete overview of the WordPress theme package including all features, assets, installation instructions, and post-setup configuration.</p>
-                <a href="/downloads/NWESTCO-THEME-PACKAGE-SUMMARY.md" download className="btn btn-primary">
-                  Download Theme Summary
+                <a href="/viewer?doc=NWESTCO-THEME-PACKAGE-SUMMARY.md" className="btn btn-primary">
+                  View Theme Summary
                 </a>
               </div>
             </div>
@@ -122,8 +122,8 @@ export default function Home() {
               </div>
               <div className="download-body">
                 <p>Comprehensive delivery package with quick start guide, all deliverables overview, and step-by-step installation instructions.</p>
-                <a href="/downloads/FINAL-DELIVERY-PACKAGE.md" download className="btn btn-primary">
-                  Download Delivery Package
+                <a href="/viewer?doc=FINAL-DELIVERY-PACKAGE.md" className="btn btn-primary">
+                  View Delivery Package
                 </a>
               </div>
             </div>
