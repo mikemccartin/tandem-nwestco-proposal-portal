@@ -1,12 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Check for existing authentication on mount
+  useEffect(() => {
+    const authStatus = sessionStorage.getItem('nwestco-auth');
+    if (authStatus === 'true') {
+      setIsAuthenticated(true);
+    }
+    setIsLoading(false);
+  }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,11 +24,17 @@ export default function Home() {
     // Simple authentication (in production, this would be server-side)
     if (password === 'nwestco2025') {
       setIsAuthenticated(true);
+      sessionStorage.setItem('nwestco-auth', 'true');
       setError('');
     } else {
       setError('Invalid password. Please try again.');
     }
   };
+
+  // Show loading state briefly to prevent flash
+  if (isLoading) {
+    return null;
+  }
 
   if (!isAuthenticated) {
     return (

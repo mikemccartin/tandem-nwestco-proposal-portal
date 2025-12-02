@@ -1,18 +1,26 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
 function ViewerContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const doc = searchParams.get('doc');
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
+    // Check authentication
+    const authStatus = sessionStorage.getItem('nwestco-auth');
+    if (authStatus !== 'true') {
+      router.push('/');
+      return;
+    }
+
     async function loadDocument() {
       if (!doc) {
         setError('No document specified');
@@ -34,7 +42,7 @@ function ViewerContent() {
     }
 
     loadDocument();
-  }, [doc]);
+  }, [doc, router]);
 
   return (
     <>
