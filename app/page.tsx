@@ -35,13 +35,17 @@ export default function Home() {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-tandem-blue to-slate-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-tandem-black to-gray-900 flex items-center justify-center p-4">
         <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full">
           {/* Tandem Theory Logo/Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-tandem-blue mb-2">Tandem Theory</h1>
-            <div className="h-1 w-20 bg-tandem-orange mx-auto mb-4"></div>
-            <p className="text-gray-600">NWESTCO Project Portal</p>
+            <div className="inline-block mb-4">
+              <div className="bg-tandem-red px-6 py-3 rounded-lg">
+                <h1 className="text-3xl font-bold text-white tracking-wider">TANDEM</h1>
+                <p className="text-white text-sm font-light tracking-widest">THEORY</p>
+              </div>
+            </div>
+            <p className="text-gray-600 mt-4">NWESTCO Project Portal</p>
           </div>
 
           {/* Auth Method Toggle */}
@@ -50,7 +54,7 @@ export default function Home() {
               onClick={() => setAuthMethod('password')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                 authMethod === 'password'
-                  ? 'bg-tandem-blue text-white'
+                  ? 'bg-tandem-black text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -60,7 +64,7 @@ export default function Home() {
               onClick={() => setAuthMethod('email')}
               className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
                 authMethod === 'email'
-                  ? 'bg-tandem-blue text-white'
+                  ? 'bg-tandem-black text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -80,7 +84,7 @@ export default function Home() {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tandem-orange focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tandem-red focus:border-transparent"
                   placeholder="Enter portal password"
                   required
                 />
@@ -88,7 +92,7 @@ export default function Home() {
               {error && <p className="text-red-500 text-sm">{error}</p>}
               <button
                 type="submit"
-                className="w-full bg-tandem-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                className="w-full bg-tandem-red hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
                 Access Portal
               </button>
@@ -107,7 +111,7 @@ export default function Home() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tandem-orange focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-tandem-red focus:border-transparent"
                   placeholder="your@email.com"
                   required
                 />
@@ -115,7 +119,7 @@ export default function Home() {
               {error && <p className="text-red-500 text-sm">{error}</p>}
               <button
                 type="submit"
-                className="w-full bg-tandem-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                className="w-full bg-tandem-red hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
               >
                 Access Portal
               </button>
@@ -133,11 +137,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-tandem-blue text-white py-6 shadow-lg">
+      <header className="bg-tandem-black text-white py-6 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold">Tandem Theory</h1>
-            <p className="text-blue-200 text-sm">NWESTCO Project Portal</p>
+          <div className="flex items-center gap-4">
+            <div className="bg-tandem-red px-4 py-2 rounded">
+              <h1 className="text-xl font-bold tracking-wider">TANDEM</h1>
+              <p className="text-xs font-light tracking-widest">THEORY</p>
+            </div>
+            <p className="text-gray-300 text-sm">NWESTCO Project Portal</p>
           </div>
           <button
             onClick={() => setIsAuthenticated(false)}
@@ -152,7 +159,7 @@ export default function Home() {
       <main className="max-w-6xl mx-auto px-4 py-12">
         {/* Project Overview */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-tandem-blue mb-4">WordPress Theme Package</h2>
+          <h2 className="text-2xl font-bold text-tandem-black mb-4">WordPress Theme Package</h2>
           <p className="text-gray-600 mb-6">
             Complete WordPress theme and content import files for your NWESTCO website. Ready to upload to WP Engine.
           </p>
@@ -169,8 +176,8 @@ export default function Home() {
           {/* Document Card 1 - Theme Package */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-tandem-orange/10 p-3 rounded-lg">
-                <svg className="w-8 h-8 text-tandem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-tandem-red/10 p-3 rounded-lg">
+                <svg className="w-8 h-8 text-tandem-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
@@ -180,7 +187,7 @@ export default function Home() {
                 <p className="text-xs text-gray-500 mb-4">Complete WordPress theme with all CSS, JavaScript, and images from Option C prototype</p>
                 <a
                   href="/downloads/nwestco-theme.zip"
-                  className="inline-flex items-center gap-2 bg-tandem-blue hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-tandem-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -194,8 +201,8 @@ export default function Home() {
           {/* Document Card 2 - Content XML */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-tandem-orange/10 p-3 rounded-lg">
-                <svg className="w-8 h-8 text-tandem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-tandem-red/10 p-3 rounded-lg">
+                <svg className="w-8 h-8 text-tandem-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
@@ -205,7 +212,7 @@ export default function Home() {
                 <p className="text-xs text-gray-500 mb-4">19 complete pages with all content from Option C - ready to import to WordPress</p>
                 <a
                   href="/downloads/nwestco-content.xml"
-                  className="inline-flex items-center gap-2 bg-tandem-blue hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-tandem-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -219,8 +226,8 @@ export default function Home() {
           {/* Document Card 3 - Installation Guide */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-tandem-orange/10 p-3 rounded-lg">
-                <svg className="w-8 h-8 text-tandem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-tandem-red/10 p-3 rounded-lg">
+                <svg className="w-8 h-8 text-tandem-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
@@ -230,7 +237,7 @@ export default function Home() {
                 <p className="text-xs text-gray-500 mb-4">Complete step-by-step instructions for uploading theme and importing content</p>
                 <a
                   href="/downloads/FINAL-DELIVERY-PACKAGE.md"
-                  className="inline-flex items-center gap-2 bg-tandem-blue hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-tandem-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -244,8 +251,8 @@ export default function Home() {
           {/* Document Card 4 - Theme Summary */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-tandem-orange/10 p-3 rounded-lg">
-                <svg className="w-8 h-8 text-tandem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-tandem-red/10 p-3 rounded-lg">
+                <svg className="w-8 h-8 text-tandem-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
@@ -255,7 +262,7 @@ export default function Home() {
                 <p className="text-xs text-gray-500 mb-4">Detailed overview of everything included in the theme package</p>
                 <a
                   href="/downloads/NWESTCO-THEME-PACKAGE-SUMMARY.md"
-                  className="inline-flex items-center gap-2 bg-tandem-blue hover:bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 bg-tandem-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -268,23 +275,23 @@ export default function Home() {
         </div>
 
         {/* Quick Start Section */}
-        <div className="bg-gradient-to-r from-tandem-blue to-slate-800 rounded-lg shadow-md p-8 text-white">
+        <div className="bg-gradient-to-r from-tandem-black to-gray-800 rounded-lg shadow-md p-8 text-white">
           <h3 className="text-xl font-bold mb-4">Quick Start Guide</h3>
           <div className="space-y-3 text-sm">
             <div className="flex gap-3">
-              <span className="font-bold bg-tandem-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">1</span>
+              <span className="font-bold bg-tandem-red rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">1</span>
               <p>Upload <strong>nwestco-theme.zip</strong> to WP Engine (Appearance → Themes → Add New)</p>
             </div>
             <div className="flex gap-3">
-              <span className="font-bold bg-tandem-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">2</span>
+              <span className="font-bold bg-tandem-red rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">2</span>
               <p>Import <strong>nwestco-content.xml</strong> (Tools → Import → WordPress)</p>
             </div>
             <div className="flex gap-3">
-              <span className="font-bold bg-tandem-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">3</span>
+              <span className="font-bold bg-tandem-red rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">3</span>
               <p>Set homepage (Settings → Reading → Static Page)</p>
             </div>
             <div className="flex gap-3">
-              <span className="font-bold bg-tandem-orange rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">4</span>
+              <span className="font-bold bg-tandem-red rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0">4</span>
               <p>Configure menus (Appearance → Menus)</p>
             </div>
           </div>
@@ -293,7 +300,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="mt-12 text-center text-gray-500 text-sm">
-          <p>Questions? Contact <a href="mailto:hello@tandemtheory.com" className="text-tandem-orange hover:underline">hello@tandemtheory.com</a></p>
+          <p>Questions? Contact <a href="mailto:hello@tandemtheory.com" className="text-tandem-red hover:underline">hello@tandemtheory.com</a></p>
           <p className="mt-2">© 2025 Tandem Theory. All rights reserved.</p>
         </div>
       </main>

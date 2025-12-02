@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         tandem: {
-          blue: '#0A2540',
-          orange: '#FF6B35',
-          gray: '#F7F7F7',
+          black: '#1a1a2e',
+          red: '#e94560',
+          gray: '#f5f5f7',
         }
       }
     },
