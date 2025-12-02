@@ -24,13 +24,15 @@ export default function Home() {
     return (
       <div className="login-container">
         <div className="login-box">
-          <Image
-            src="/assets/tandem-theory-logo.png"
-            alt="Tandem Theory"
-            width={150}
-            height={50}
-            className="tandem-logo-img"
-          />
+          <div className="logo-container">
+            <Image
+              src="/assets/tandem-theory-logo.png"
+              alt="Tandem Theory"
+              width={150}
+              height={50}
+              className="tandem-logo-img"
+            />
+          </div>
           <h2>NWESTCO Project Portal</h2>
           <p>Secure access to project deliverables</p>
 
@@ -77,15 +79,15 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="container">
-          <h1>NWESTCO WordPress Theme</h1>
+          <h1>NWESTCO Proposal Documents</h1>
           <p>Complete WordPress theme package and content export for NWESTCO&apos;s website - fuel systems, car wash, and environmental services.</p>
           <div className="client-logo">
             <Image
               src="/assets/nwestco_logo_flat.png"
               alt="Nwestco"
-              width={200}
+              width={300}
               height={60}
-              style={{ filter: 'brightness(0) invert(1)' }}
+              style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
             />
           </div>
         </div>
