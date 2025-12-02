@@ -80,7 +80,6 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <h1>NWESTCO Proposal Documents</h1>
-          <p>Complete WordPress theme package and content export for NWESTCO&apos;s website - fuel systems, car wash, and environmental services.</p>
           <div className="client-logo">
             <Image
               src="/assets/nwestco_logo_flat.png"
