@@ -34,12 +34,30 @@ body {
 /* Header */
 header {
   background: var(--tandem-dark);
-  padding: 40px 0;
-  text-align: center;
+  padding: 24px 0;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nwestco-logo {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .tandem-logo {
-  height: 50px;
+  height: 40px;
   width: auto;
 }
 
@@ -49,42 +67,6 @@ header p {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 8px;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, var(--nwestco-blue) 0%, #001F28 100%);
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 0;
-  opacity: 0.7;
-}
-
-.hero p {
-  font-size: 1.125rem;
-  opacity: 0.9;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.client-logo {
-  margin-top: 16px;
-}
-
-.client-logo img {
-  height: 60px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  object-fit: contain;
 }
 
 /* Sections */

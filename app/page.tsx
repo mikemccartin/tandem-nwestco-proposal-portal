@@ -81,32 +81,25 @@ export default function Home() {
       {/* Header */}
       <header>
         <div className="container">
-          <Image
-            src="/assets/tandem-theory-logo.png"
-            alt="Tandem Theory"
-            width={150}
-            height={50}
-            className="tandem-logo"
-          />
-          <p>Strategic Marketing Partner</p>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section className="hero">
-        <div className="container">
-          <h1>NWESTCO Proposal Documents</h1>
-          <div className="client-logo">
+          <div className="header-logos">
             <Image
               src="/assets/nwestco_logo_flat.png"
               alt="Nwestco"
-              width={300}
-              height={60}
-              style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
+              width={150}
+              height={40}
+              className="nwestco-logo"
+            />
+            <div className="logo-divider"></div>
+            <Image
+              src="/assets/tandem-theory-logo.png"
+              alt="Tandem Theory"
+              width={150}
+              height={40}
+              className="tandem-logo"
             />
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Downloads Section */}
       <section>
